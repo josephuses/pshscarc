@@ -5,45 +5,7 @@
 \ProcessOptions
 \LoadClass{book}
 
-\newif\if@firstnamea    \@firstnameafalse
-\newif\if@firstnameb    \@firstnamebfalse
-\newif\if@firstnamec    \@firstnamecfalse
-\newif\if@surnamea  \@surnameafalse
-\newif\if@surnameb  \@surnamebfalse
-\newif\if@surnamec  \@surnamecfalse
-\newif\if@midinitiala    \@midinitialafalse
-\newif\if@midinitialb    \@midinitialbfalse
-\newif\if@midinitialc    \@midinitialcfalse
-\newif\if@surnamed  \@surnamedfalse
-\newif\if@surnamee  \@surnameefalse
-\newif\if@surnamef  \@surnameffalse
-\newif\if@firstnamed    \@firstnamedfalse
-\newif\if@firstnamee    \@firstnameefalse
-\newif\if@firstnamef    \@firstnameffalse
-\newif\if@midinitiald    \@midinitialdfalse
-\newif\if@midinitiale    \@midinitialefalse
-\newif\if@midinitialf    \@midinitialffalse
-
-\def\surnamea#1{\gdef\@surnamea{#1}\@surnameatrue}
-\def\firstnamea#1{\gdef\@firstnamea{#1}\@firstnameatrue}
-\def\midinitiala#1{\gdef\@midinitiala{#1}\@midinitialatrue}
-\def\surnameb#1{\gdef\@surnameb{#1}\@surnamebtrue}
-\def\firstnameb#1{\gdef\@firstnameb{#1}\@firstnamebtrue}
-\def\midinitialb#1{\gdef\@midinitialb{#1}\@midinitialbtrue}
-\def\surnamec#1{\gdef\@surnamec{#1}\@surnamectrue}
-\def\firstnamec#1{\gdef\@firstnamec{#1}\@firstnamectrue}
-\def\midinitialc#1{\gdef\@midinitialc{#1}\@midinitialctrue}
-\def\surnamed#1{\gdef\@surnamed{#1}\@surnamedtrue}
-\def\firstnamed#1{\gdef\@firstnamed{#1}\@firstnamedtrue}
-\def\midinitiald#1{\gdef\@midinitiald{#1}\@midinitialdtrue}
-\def\surnamee#1{\gdef\@surnamee{#1}\@surnameetrue}
-\def\firstnamee#1{\gdef\@firstnamee{#1}\@firstnameetrue}
-\def\midinitiale#1{\gdef\@midinitiale{#1}\@midinitialetrue}
-\def\surnamef#1{\gdef\@surnamef{#1}\@surnameftrue}
-\def\firstnamef#1{\gdef\@firstnamef{#1}\@firstnameftrue}
-\def\midinitialf#1{\gdef\@midinitialf{#1}\@midinitialftrue}
-\def\defenseDate#1{\gdef\@defensedate{#1}}
-
+\RequirePackage{graphicx}
 % Use tikz for flow charts
 \RequirePackage{tikz}
 \usetikzlibrary{shapes.geometric,positioning,arrows,fit}
@@ -78,6 +40,8 @@
 \else
     \RequirePackage[T1]{fontenc}
     \RequirePackage[utf8]{inputenc}
+    \RequirePackage{mathpazo}
+    \RequirePackage{inconsolata}
 \fi
 % xetex:
 \expandafter\ifx\csname XeTeXinterchartoks\endcsname\relax
@@ -119,8 +83,16 @@
 
 \RequirePackage{titling}
 
+\renewcommand{\chaptername}{CHAPTER}
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+\renewcommand{\listtablename}{LIST OF TABLES}
+\renewcommand{\listfigurename}{LIST OF FIGURES}
 
-
-
+% Defining \Section and \Subsection commands to make inclusion in toc automatic for starred 
+% section and subsection variants
+\newcommand{\Section}[1]{\addcontentsline{toc}{section}{#1}
+\section*{#1}}
+\newcommand{\Subsection}[1]{\addcontentsline{toc}{subsection}{#1}
+\section*{#1}}
 
 \endinput
