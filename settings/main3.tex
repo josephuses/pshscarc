@@ -1,0 +1,242 @@
+\documentclass{pshscarc2013}
+
+\usepackage{graphicx, color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\usepackage[margin=1.1in]{geometry}
+
+\usepackage{Sweavel}
+
+
+\usepackage{indentfirst}
+%\usepackage{titlesec}
+%\titleformat{\section*}[runin]{\Large\bfseries}{\thesection}{\topskip}{\vspace{\topskip}}[\vspace{0pt}]
+
+%% Based on physlb01 class 
+%% Last modified 2012.08.28
+%%
+%% main.tex
+%% Based on formatted NIP thesis by Johnrob Y. Bantang (2006)
+%%
+%% Last modified 2012.03.19 cmnpinol
+%%
+%% This tex is free; you can redistribute it and/or modify it under
+%% the terms of the GNU General Public License as published by the
+%% Free Software Foundation version 2. See gpl.txt.
+%%
+%% This tex files are distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+%% General Public License for more details.
+%%
+%% You should have received a copy of the GNU General Public License
+%% along with this program; if not, write to the Free Software
+%% Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+%% 02110-1301, USA.
+%%
+%%
+%%
+
+
+   %% square-bracketed, numbered, sorted, and compressed citations
+   %% for more info: http://merkel.zoneo.net/Latex/natbib.php
+%\usepackage{verbatim} %% for \verbatiminput
+%\usepackage{graphicx} %% for the graphics environment%
+%\usepackage[centertags]{amsmath}
+
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{siunitx}
+\usepackage{minted}
+
+\renewcommand\listoflistingscaption{\textbf{LIST OF LISTINGS}}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.7}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,positioning,arrows,fit}
+
+\usepackage{placeins}
+
+\renewcommand{\chaptername}{CHAPTER}
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\bfseries}{\thesection}{0em}{}
+
+\titleformat{\chapter}[display]
+{\normalfont\bfseries\centering}{\chaptertitlename\ \thechapter}{0pt}{\normalfont\bfseries\uppercase}
+
+\titlespacing{\chapter}{0pt}{\baselineskip}{\baselineskip}
+
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\chapter*{\bibname}}{\chapter*{\MakeUppercase{\bibname}}}{}{}
+
+
+
+%% Header section
+\title{\textbf{Time Series Analysis of Precipitation in Baguio City between 2001 and 2012 Using Holt-Winters Forecasting}}
+\email{author@mail.com}%% apperas only when dfrat version use \draft option.
+\adviser{Joseph S. Tabadero, Jr.}{~}%% Required
+\coadviser{Melanie Mae I. Matias}{~}
+\reader{Conrado C. Rotor, Jr.}{Ph.D.}%% required 
+\head{Joseph S. Tabadero, Jr.}{~} %% head
+\director{Arfe G. Castillo}{~} %% director
+\dean{Conrado C. Rotor, Jr.}{Ph.D.} %% director
+\gradyear{2013}\gradmonth{March} %% graduation month and year
+\defenseDate{4 March 2013}
+
+%% Specify author details (for abstract, title page and certification page)
+\surnamea{Cabantac}
+\firstnamea{Sheanne Eric}
+\midinitiala{P}
+\surnameb{Osbucan}
+\firstnameb{Mikhail Antoni}
+\midinitialb{A}
+%\surnamec{Yodong}
+%\firstnamec{John Christopher}
+%\midinitialc{C}
+%\firstnamed{Analoraine}
+%\midinitiald{M}
+%\surnamed{Dalilis}
+%\surnamee{Author}
+%\firstnamee{Fifth}
+%\midinitiale{N}
+%\surnamef{Author}
+%\firstnamef{Sixth}
+%\midinitialf{N}
+
+%% 
+
+%% Preliminary pages' contents input here..
+\dedication{ \input{dedication.tex} }%% optional, see dedication.tex for sample content.
+%\biosketch{ \input{biosketch.tex} }%% optional, see biosketch.tex for sample content.
+\acknowledgments{ \input{acknowledgments.tex} } %% optional, see acknowledgment.tex for sample content.
+\abstract{ \input{abstract.tex} } %% see abstract.tex
+
+
+\usepackage{amsmath}
+\usepackage{mathpazo}
+\usepackage{listings}
+\usepackage{inconsolata}
+\usepackage{caption}
+\captionsetup{skip=5pt,labelfont=bf}
+\lstset{breaklines=true,showstringspaces=false,
+escapeinside={/*}{*/}
+}
+\newcommand{\Rstat}{\textsf{R}}
+
+
+\begin{document}
+\maketitle %% creates title page, do not remove this line.
+\makePrelim %% creates preliminary pages, do not remove this line.
+\listoflistings
+
+\input{introduction.tex}
+\input{litReview.tex}
+\input{Methodology.tex} %%could be model or experiment set-up
+\input{Results.tex} %%could be results and discussions
+\input{summaryAndConclusion.tex}
+
+%% you may add more chapters by including more files just as above.
+%% see the files for patterns of the format used.
+
+\renewcommand{\bibname}{Cited References}
+\def\bibindent{1.5em}
+\begin{thebibliography}{99\kern\bibindent}
+\makeatletter
+\let\old@biblabel\@biblabel
+\def\@biblabel#1{\old@biblabel{#1}\kern\bibindent}
+\let\old@bibitem\bibitem
+\def\bibitem#1{\old@bibitem{#1}\leavevmode\kern-\bibindent}
+\renewcommand\@biblabel[1]{}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt plus 0.3ex}
+\makeatother
+\bibitem{ramsey} Ramsey W L, Sager R J, Phillips C R, Watenpugh F M. Modern Earth Science. Harcourt Brace Company; 1998.
+\bibitem{ismed1} NISMED (1983). Earth Science: The Philippines in focus. Quezon City (PH): Institute for Science and Mathematics Education Development
+\bibitem{manila} The Philippines [homepage on the Internet]. Manila (PH): The Utrecht Faculty of Education; n.d. [cited 2012 June 25]. Available from: \url{http://www.philippines.hvu.nl/climate1.htm}.
+\bibitem{ww2010} WW2010 [homepage on the Internet]. Chicago (IL): Department of Atmospheric Sciences; 2003 Dec. 3. [Cited 2012 June 26]. Available from: \url{http://ww2010.atmos.uiuc.edu/(Gh)/wwhlpr/about_ww2010.rxml?hret=/guides/mtr/cld/prcp/home.rxml}
+\bibitem{digital} Digital Atlas [homepage on the Internet]. 2002 Apr. 25. [cited 2012 June 27]. Available from: \url{http://imnh.isu.edu/digitalatlas/clima/patterns/ppfr.htm}.
+\bibitem{reegle} Reegle [homepage on the Internet]. Vienna (AU): 2010 May 17. [cited 2012 June 27]. Available from: \url{http://www.reegle.info/glossary/1316.}
+\bibitem{mccracken} McCracken M. Teach Me Finance [homepage on the Internet]. 2012 Mar. 25. [cited 2012 June 27]. Available from: \url{ http://www.teachmefinance.com/Scientific_Terms/Rainfall.html}
+\bibitem{meteorolgyclim} Meteorology Climate [homepage on the Internet]. 2012 Apr. 16. [cited 2012 June 25]. Available from: \url{http://www.meteorologyclimate.com/Tropical-climate.htm}.
+\bibitem{jamal} Jamal H. About Civil [homepage on the Internet]. Soft Technologies; 2010 Aug. 18. [Cited 2012 June 25]. Available from: \url{http://www.aboutcivil.com/precipitation-in-engineering-hydrology.html}
+\bibitem{mandate} Mandate and Functions. [Internet]. [cited October 3 2012].Available from:  \url{http://www.pagasa.dost.gov.ph/mandate_functions.shtml}
+\bibitem{worboys} Worboys J. 2007. How Does a Tipping Bucket Rain Gauge Work?. [Internet]. [, cited September 9 2012] Available from: \url{ http://weather.about.com/od/weatherfaqs/a/RainGauges.html}
+\bibitem{tdis} Student's t-Distribution [Internet]. WolframMathworld; cited 2012 Nov 14]. Available from: \url{http://mathworld.wolfram.com/Studentst-Distribution.html}
+\bibitem{raingauge} Rain Gauge [Internet]. Colby College; cited 2013 Jan 23]. Available from: \url{ http://www.colby.edu/cpse/equipment2/Weather/gauge.html}
+\bibitem{tdist2} Student's t Distribution [Internet]: Stat Trek; [cited 2012 Nov 30]. Available from: \url{ http://stattrek.com/probability-distributions/t-distribution.aspx}
+\bibitem{kesar} Kesar Singh KS, Minge Xie MX.  Bootstrap: A Statistical Method. [Internet]., cited 2012 Nov 30]. Available from: \url{ http://www.stat.rutgers.edu/home/mxie/rcpapers/bootstrap.pdf}
+\bibitem Eric W. Weisstein EW. Bootsrap Methods [Internet]. MathWorld. [cited 2012 Nov 30] . Available from: \url{http://mathworld.wolfram.com/BootstrapMethods.html}
+\bibitem{expsmoothing} What is Exponential Smoothing? [Internet]; 2003 June 01.NIST/SEMATECH; [2012 Apr 01, cited 2012 Oct 15]; Available from: \url{ http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc43.htm}
+\bibitem{tdist3} T Distribution Critical Values Table [Internet]. [Cited 2012 Dec 10]. Available from: \url{http://easycalculation.com/statistics/t-distribution-critical-value-table.php}
+\bibitem{william} William MK. The T-test [Internet]; Web Center for Social Research Methods; [2006 Oct 20, cited 2012 Dec 12]. Available from: \url{ http://www.socialresearchmethods.net/kb/stat_t.php}
+\bibitem{global} The Global Monsoon System: Research and Forecast [Internet].International Committee of the Third Workshop on Monsoons; [2008 March 16, cited 2012 Nov 25]. Available from: The Global Monsoon System: Research and Forecast.	
+\bibitem{eric} Eric W. Weisstein EW. Bootsrap Methods [Internet]. MathWorld. [cited 2012 Nov 30] . Available from:  \url{http://mathworld.wolfram.com/BootstrapMethods.html}
+\bibitem{william} William MK. The T-test [Internet]; Web Center for Social Research Methods; [2006 Oct 20, cited 2012 Dec 12]. Available from: \url{http://www.socialresearchmethods.net/kb/stat_t.php}
+
+\bibitem{weather} Weather History for Baguio City. [Discussion list on the Internet]. n.d.; [cited 2012 June 26]. Available from: \url{http://www.meoweather.com/history/philippines/na/16.4163889/120.5930556/Baguio%20City.html?units=c#}
+
+\bibitem{intensity} Intensity of rainfall. In: Floodsite Project [discussion list on the Internet]. 2008; [cited 2012 June 26]. Available from: \url{http://www.floodsite.net/juniorfloodsite/html/en/student/thingstoknow/hydrology/rainfallintensity.html}
+
+\bibitem{climatesofphil} Climates of the Philippines. [Discussion list on the Internet]. n.d.; [cited 2012 June 26]. Available from: \url{http://www.silent-gardens.com/climate.php}
+
+\bibitem{box} Box, G.E.P.,  Jenkins. G.M., and Reinsel. G.C.  1994. Time Series Analysis Forecast and Control, 3rd Edition. Englewood Cliffs, NJ: Prentice Hall.
+
+\bibitem{dai} Dai, A. 1999. Recent changes in the diurnal cycle of precipitation over the United States. Geophysical Res. Letters 26:341-344
+
+\bibitem{cutrim} Cutrim,  E.M., Martin, D., Butzow, D.G., Silva, I., and Yulaeva, E. 2000. Pilot analysis of hourly rainfall in central and eastern Amazonia. J. Climate 13: 1326-1334.
+
+\bibitem{tularam} Tularam, G.A. and M. Ilahee, 2010. Time Series Analysis of Rainfall and Temperature Interactions in Coastal Catchments. J. Math. Stat., 6: 372-380.
+
+\bibitem{zeger}
+Zeger, Scott L.; Irizarry, Rafael A.; and Peng, Roger D., "On Time Series Analysis of Public Health and Biomedical Data" (September 2004). Johns Hopkins University, Dept. of Biostatistics 
+
+\bibitem{yevjevich}
+Yevjevich, V. (1972) Structural Analysis of Hydrologie Time Series. Hydrology Paper, No. 56, 18-34. Colorado State University, Fort Collins, Colorado.
+
+\bibitem{wiser}
+Wiser. E.H. ( 1967) An analysis of runs of precipitation events. Proceedings of the International Hydrology Symposium, Vol. 1. 258 266. Fort Collins. Colorado.
+
+\bibitem{mekong}
+Mekong Secretariat (1975). Summary of Monthly and Yearly Hydrometeorological Data in the Thai Part of the Lower Mekong Basin. Working Paper, MKG/29. 117-128. Bangkok, Thailand.
+
+\bibitem{shver}
+Shver, Ts.A. (1975) Degree of precipitation irregularity as an indication of landscape zonality. Soviet Hydrology, Selected Papers, No. 3, 159-164.
+
+\bibitem{anderson}
+Anderson. R.L. (1942) Distribution of the serial correlation coefficient. Ann. Math. Stat. 13, 1-13.
+DALE, W. L. 1959. The rainfall in Malaya, Part 1. J Trop. Geogr. 13: 23-37.
+
+\bibitem{nieuwolt} 
+Nieuwolt S. 1981. The climates of Continental Southeast Asia, chapter 1. In: World Survey of Climatology, p. 1-37. Takahasi and Arakawa, eds. Elsevier Scientific Publishing Co.
+
+\bibitem{intensity2}
+Intensity of rainfall. In: Floodsite Project [discussion list on the Internet]. 2008. [cited 2012 June 26]. Available from: \url{http://www.floodsite.net/juniorfloodsite/html/en/student/thingstoknow/hydrology/rainfallintensity.html}
+
+\bibitem{kalekar} Kalekar PS (2004). Time series Forecasting using Holt-Winters Exponential Smoothing [Internet]. [cited: 2013 Mar 5]; Available from: \url{http://www.itl.nist.gov/}
+\end{thebibliography}
+
+\appendix
+\input{appendix.tex}
+\input{biosketch.tex}
+
+
+
+\end{document}

@@ -1,0 +1,103 @@
+\chapter{Methodology}
+
+%\section{Materials}
+
+% Below is an environment for itemized lists.
+%\hspace{\parindent}The materials used in this study are the following:
+%\begin{itemize}
+%  \item Uncooked tapioca “sago” balls 
+%  \item Digital weighing scale (Max. capacity: 200g, Resolution: 0.001g)
+%  \item Cylinder tube made of cardboard: opaque and open in both ends
+%  \item Plywood
+%  \item 100mL graduated cylinder
+%  \item Plastic/cellophane bags
+%  \item Plastic cups
+%\end{itemize}
+
+%\clearpage
+\addcontentsline{toc}{section}{Research Design}
+\section*{Research Design}
+
+The study, which is about the rainfall patterns of Baguio, involves quantitative research on the rainfall amounts of Baguio. A statistical analysis shall be done on the gathered data, particularly a Time Series Analysis. The Holt-Winters Method will be applied to the time series data from January 2001 to December 2011 to make determine the coefficients of the mathematical model for forecasting values from January 2012 to December 2012 which were retrieved from PAG-ASA. Auto-correlation function, Ljung-Box test, and test for normality were used to test for the validity of the model.
+
+\addcontentsline{toc}{section}{Sources of Data}
+\section*{Sources of Data}
+
+The data were the rainfall amounts per month in Baguio City. The sample, which will be taken from the population, were the rainfall amounts ranging from January 2000 to December 2011. Rainfall amount was measured using either a tipping bucket or rain gauge. It is measured and recorded in millimeters every three hours starting from 2a.m. to 11p.m.. The data was gathered from the weather station of PAGASA located in Baguio City.
+
+\addcontentsline{toc}{section}{Locale of the Study}
+\section*{Locale of the Study}
+
+There have been a series of occurrences of unforeseen flashfloods and landslides in Baguio City, especially in areas such as City Camp Lagoon, so the researchers chose that the study should be done in Baguio City.
+
+\addcontentsline{toc}{section}{Population/Sampling}
+\section*{Population/Sampling}
+
+The study involved the analysis of rainfall amounts gathered daily by PAGASA. The research would only take into consideration the data gathered from January 2000 to December 2011 since the study was proposed before several months before the year 2012 ended.
+
+\addcontentsline{toc}{section}{Instrumentation and Data Collection}
+\section*{Instrumentation and Data Collection}
+
+The data was then summarized and classified by year on Microsoft Excel. However, the amount of rainfall for May 2006 was missing, so a statistical method called Bootstrapping method was done to generate a forecasted value. 
+
+Bootstrapping method is a method developed by B. Efron on 1979. It is a computer-based method for assigning accurate sample estimates. This method allows estimation of the sample distribution of almost any value using only very simple methods (Varian 2005). Using R-statistics, a computer statistical software, bootstrapping method was used to generate an estimate for May 2006. 
+
+The data from January 2001 to December 2005 was used to generate an estimate for May 2006, through R-statistics.
+Then, a time-series analysis was conducted. A time-series analysis is a method used to obtain an understanding of the forces, which produced the data. The time series analysis is a set of data used and collected sequentially at fixed intervals of time. The amount of rainfall , is a time series data, which is measured and recorded at successive time intervals.
+
+\FloatBarrier
+\addcontentsline{toc}{section}{Protocol}
+\section*{Protocol}
+
+The time series analysis and forecasting will be done using a statistical software called R-statistics. R is a free software environment for statistical computing and graphics. It compiles and runs on a wide variety of UNIX platforms, Windows and MacOS. 
+
+\newpage
+\addcontentsline{toc}{section}{Research Paradigm}
+\section*{Research Paradigm}
+\tikzset{
+input/.style={draw,trapezium, trapezium left angle=70, trapezium right angle=110, align=center},
+process/.style={draw,rectangle,align=center},
+decision/.style={draw, diamond, align=center},
+}
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}[ultra thick,rounded corners, >=stealth']
+\node (Data) [input] {Data};
+\node (Pre-process) [process, below=of Data] {Pre-processing\\ stage:\\
+	Encoding\\
+	and\\
+	Inputting to\\
+	Software
+	};
+\node (holt) [process, below=of Pre-process] {Holt-Winters\\
+exponential\\
+smoothing\\
+and\\
+forecasting};
+\node (box) [process, below=2.5cm of holt] {Ljung-Box test};
+\node (acf) [process, left=of box] {
+Auto-correlation\\
+function\\
+technique
+};
+\node (normal) [process, right=of box, inner sep=12pt] {
+Test \\
+for normality
+};
+\node (stat) [fit=(normal)(box)(acf), process, inner sep=24pt] {
+};
+\node (model) [below=2.5cm of box, process]{
+Model
+};
+
+\foreach \x/\y in 
+	{Data/Pre-process,Pre-process/holt,holt/stat,stat/model}
+	\path [->] (\x) edge (\y);
+
+\node at (stat.north) [anchor=north] {
+\textbf{Tests for Fitness of Holt-Winters Model}
+};
+\end{tikzpicture}
+\caption{\label{flowchart} Flow chart for time rainfall time series analysis.}
+\end{figure}
+

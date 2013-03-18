@@ -1,0 +1,12 @@
+forecast
+tikzDevice
+filehash
+codetools
+knitr
+stats
+graphics
+grDevices
+utils
+datasets
+methods
+base

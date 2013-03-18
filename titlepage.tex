@@ -1,0 +1,58 @@
+\newcommand{\makeprelim}{
+\begin{titlepage}
+\begin{center}
+{\bfseries\@title}
+
+\vfill
+
+\if@draft {
+A Research Proposal Submitted 
+to the Research Council
+
+Science, Mathematics, Computer and Technology Department
+
+Philippine Science High School
+
+Cordillera Administrative Region Campus
+
+Cordillera Administrative Region Campus}
+\else
+
+{
+A Research Paper Submitted 
+to the Research Council
+
+Science, Mathematics, Computer and Technology Department
+
+Philippine Science High School
+
+Cordillera Administrative Region Campus
+
+Cordillera Administrative Region Campus}
+
+\vfill
+
+\textbf{\MakeUppercase{\@firstnamea} \MakeUppercase{\@midinitiala}.\ \MakeUppercase{\@surnamea}}%
+\if@firstnameb, \if@firstnamec\else and \fi
+	\textbf{\MakeUppercase{\@firstnameb} \MakeUppercase{\@midinitialb}.\ \MakeUppercase{\@surnameb}}
+	\if@firstnamec, 
+	\else\space\fi
+		\if@firstnamec and \textbf{\MakeUppercase{\@firstnamec} \MakeUppercase{\@midinitialc}.\ \MakeUppercase{\@surnamec}} 
+	\fi\else\space
+\fi
+
+\vfill
+
+In Partial Fulfillments of the Requirements
+
+for the Course
+
+Science and Technology Research II
+
+\vfill
+
+\@defenseDate
+
+\end{center}
+\end{titlepage}
+}

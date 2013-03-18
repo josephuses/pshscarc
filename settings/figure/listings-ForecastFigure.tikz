@@ -1,0 +1,320 @@
+% Created by tikzDevice version 0.6.2-92-0ad2792 on 2013-03-03 21:08:58
+% !TEX encoding = UTF-8 Unicode
+\documentclass{article}
+\nonstopmode
+
+\usepackage{tikz}
+
+\usepackage[active,tightpage,psfixbb]{preview}
+
+\PreviewEnvironment{pgfpicture}
+
+\setlength\PreviewBorder{0pt}
+
+\newcommand{\SweaveOpts}[1]{}  % do not interfere with LaTeX
+\newcommand{\SweaveInput}[1]{} % because they are not real TeX commands
+\newcommand{\Sexpr}[1]{}       % will only be parsed by R
+
+
+
+\usepackage{amsmath}
+\usepackage{mathpazo}
+\usepackage{listings}
+\usepackage{inconsolata}
+\usepackage{caption}
+\captionsetup{skip=0pt,labelfont=bf}
+\lstset{breaklines=true,showstringspaces=false}
+\newcommand{\Rstat}{\textsf{R}}
+
+
+
+
+
+\begin{document}
+
+\begin{tikzpicture}[x=1pt,y=1pt]
+\definecolor[named]{fillColor}{rgb}{1.00,1.00,1.00}
+\path[use as bounding box,fill=fillColor,fill opacity=0.00] (0,0) rectangle (433.62,361.35);
+\begin{scope}
+\path[clip] ( 49.20, 61.20) rectangle (408.42,312.15);
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 62.50,170.93) --
+	( 64.83,172.60) --
+	( 67.16,189.39) --
+	( 69.48,175.05) --
+	( 71.81,189.47) --
+	( 74.13,200.23) --
+	( 76.46,280.07) --
+	( 78.79,188.33) --
+	( 81.11,226.43) --
+	( 83.44,176.46) --
+	( 85.76,174.08) --
+	( 88.09,171.51) --
+	( 90.42,170.29) --
+	( 92.74,170.09) --
+	( 95.07,169.99) --
+	( 97.39,174.73) --
+	( 99.72,187.68) --
+	(102.05,197.52) --
+	(104.37,296.26) --
+	(106.70,205.20) --
+	(109.02,190.17) --
+	(111.35,185.03) --
+	(113.68,174.47) --
+	(116.00,170.62) --
+	(118.33,170.61) --
+	(120.65,171.66) --
+	(122.98,170.28) --
+	(125.31,173.09) --
+	(127.63,214.40) --
+	(129.96,223.09) --
+	(132.28,218.32) --
+	(134.61,243.01) --
+	(136.93,190.29) --
+	(139.26,182.00) --
+	(141.59,174.00) --
+	(143.91,170.25) --
+	(146.24,171.09) --
+	(148.56,178.58) --
+	(150.89,175.31) --
+	(153.22,172.49) --
+	(155.54,198.70) --
+	(157.87,257.57) --
+	(160.19,199.82) --
+	(162.52,266.05) --
+	(164.85,185.08) --
+	(167.17,172.80) --
+	(169.50,177.63) --
+	(171.82,180.34) --
+	(174.15,169.97) --
+	(176.48,169.95) --
+	(178.80,173.62) --
+	(181.13,172.10) --
+	(183.45,189.47) --
+	(185.78,198.50) --
+	(188.11,189.56) --
+	(190.43,216.24) --
+	(192.76,216.53) --
+	(195.08,187.16) --
+	(197.41,173.66) --
+	(199.74,174.51) --
+	(202.06,180.72) --
+	(204.39,170.54) --
+	(206.71,172.53) --
+	(209.04,171.94) --
+	(211.37,191.92) --
+	(213.69,182.57) --
+	(216.02,288.64) --
+	(218.34,219.30) --
+	(220.67,183.88) --
+	(223.00,191.14) --
+	(225.32,174.81) --
+	(227.65,172.85) --
+	(229.97,169.95) --
+	(232.30,169.99) --
+	(234.62,172.09) --
+	(236.95,171.66) --
+	(239.28,190.65) --
+	(241.60,193.99) --
+	(243.93,184.64) --
+	(246.25,250.53) --
+	(248.58,197.34) --
+	(250.91,197.47) --
+	(253.23,199.78) --
+	(255.56,171.40) --
+	(257.88,171.56) --
+	(260.21,176.46) --
+	(262.54,175.23) --
+	(264.86,180.00) --
+	(267.19,226.27) --
+	(269.51,190.21) --
+	(271.84,215.64) --
+	(274.17,236.98) --
+	(276.49,220.99) --
+	(278.82,181.90) --
+	(281.14,175.49) --
+	(283.47,169.95) --
+	(285.80,170.49) --
+	(288.12,174.28) --
+	(290.45,175.51) --
+	(292.77,197.27) --
+	(295.10,189.97) --
+	(297.43,224.27) --
+	(299.75,220.81) --
+	(302.08,242.90) --
+	(304.40,204.62) --
+	(306.73,302.86) --
+	(309.06,171.44) --
+	(311.38,169.95) --
+	(313.71,170.63) --
+	(316.03,170.32) --
+	(318.36,170.98) --
+	(320.69,179.92) --
+	(323.01,186.63) --
+	(325.34,186.99) --
+	(327.66,206.41) --
+	(329.99,205.94) --
+	(332.31,189.86) --
+	(334.64,231.66) --
+	(336.97,185.14) --
+	(339.29,173.13) --
+	(341.62,176.26) --
+	(343.94,170.88) --
+	(346.27,175.92) --
+	(348.60,170.75) --
+	(350.92,200.97) --
+	(353.25,205.44) --
+	(355.57,199.19) --
+	(357.90,243.47) --
+	(360.23,224.89) --
+	(362.55,192.24) --
+	(364.88,175.43) --
+	(367.20,174.47);
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (433.62,361.35);
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.44] at (228.81,331.92) {\bfseries Forecasts from HoltWinters};
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (433.62,361.35);
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,0.00}
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 90.42, 61.20) -- (369.53, 61.20);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 90.42, 61.20) -- ( 90.42, 55.20);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] (146.24, 61.20) -- (146.24, 55.20);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] (202.06, 61.20) -- (202.06, 55.20);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] (257.88, 61.20) -- (257.88, 55.20);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] (313.71, 61.20) -- (313.71, 55.20);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] (369.53, 61.20) -- (369.53, 55.20);
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at ( 90.42, 39.60) {2002};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at (146.24, 39.60) {2004};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at (202.06, 39.60) {2006};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at (257.88, 39.60) {2008};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at (313.71, 39.60) {2010};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at (369.53, 39.60) {2012};
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 49.20, 69.36) -- ( 49.20,304.08);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 49.20, 69.36) -- ( 43.20, 69.36);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 49.20,102.89) -- ( 43.20,102.89);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 49.20,136.42) -- ( 43.20,136.42);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 49.20,169.95) -- ( 43.20,169.95);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 49.20,203.48) -- ( 43.20,203.48);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 49.20,237.01) -- ( 43.20,237.01);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 49.20,270.55) -- ( 43.20,270.55);
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 49.20,304.08) -- ( 43.20,304.08);
+
+\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at ( 34.80, 69.36) {-1500};
+
+\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at ( 34.80,136.42) {-500};
+
+\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at ( 34.80,169.95) {0};
+
+\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at ( 34.80,203.48) {500};
+
+\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at ( 34.80,237.01) {1000};
+
+\node[text=drawColor,rotate= 90.00,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at ( 34.80,304.08) {2000};
+
+\path[draw=drawColor,line width= 0.4pt,line join=round,line cap=round] ( 49.20, 61.20) --
+	(408.42, 61.20) --
+	(408.42,312.15) --
+	( 49.20,312.15) --
+	( 49.20, 61.20);
+\end{scope}
+\begin{scope}
+\path[clip] ( 49.20, 61.20) rectangle (408.42,312.15);
+\definecolor[named]{fillColor}{rgb}{0.86,0.86,0.87}
+
+\path[fill=fillColor] (369.53,125.34) --
+	(371.86,118.40) --
+	(374.18,112.13) --
+	(376.51,106.37) --
+	(378.83,101.02) --
+	(381.16, 96.00) --
+	(383.49, 91.25) --
+	(385.81, 86.74) --
+	(388.14, 82.43) --
+	(390.46, 78.30) --
+	(392.79, 74.33) --
+	(395.12, 70.49) --
+	(395.12,294.94) --
+	(392.79,291.11) --
+	(390.46,287.13) --
+	(388.14,283.00) --
+	(385.81,278.69) --
+	(383.49,274.18) --
+	(381.16,269.43) --
+	(378.83,264.41) --
+	(376.51,259.06) --
+	(374.18,253.31) --
+	(371.86,247.04) --
+	(369.53,240.09) --
+	cycle;
+\definecolor[named]{fillColor}{rgb}{0.69,0.71,0.81}
+
+\path[fill=fillColor] (369.53,145.20) --
+	(371.86,140.66) --
+	(374.18,136.56) --
+	(376.51,132.80) --
+	(378.83,129.30) --
+	(381.16,126.02) --
+	(383.49,122.91) --
+	(385.81,119.96) --
+	(388.14,117.14) --
+	(390.46,114.44) --
+	(392.79,111.85) --
+	(395.12,109.34) --
+	(395.12,256.10) --
+	(392.79,253.59) --
+	(390.46,250.99) --
+	(388.14,248.29) --
+	(385.81,245.47) --
+	(383.49,242.52) --
+	(381.16,239.42) --
+	(378.83,236.14) --
+	(376.51,232.64) --
+	(374.18,228.87) --
+	(371.86,224.77) --
+	(369.53,220.23) --
+	cycle;
+\definecolor[named]{drawColor}{rgb}{0.00,0.00,1.00}
+
+\path[draw=drawColor,line width= 0.8pt,line join=round,line cap=round] (369.53,182.72) --
+	(371.86,182.72) --
+	(374.18,182.72) --
+	(376.51,182.72) --
+	(378.83,182.72) --
+	(381.16,182.72) --
+	(383.49,182.72) --
+	(385.81,182.72) --
+	(388.14,182.72) --
+	(390.46,182.72) --
+	(392.79,182.72) --
+	(395.12,182.72);
+\end{scope}
+\end{tikzpicture}
+
+\end{document}

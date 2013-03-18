@@ -1,0 +1,131 @@
+\documentclass{pshscarc}
+\usepackage{indentfirst}
+%\usepackage{titlesec}
+%\titleformat{\section*}[runin]{\Large\bfseries}{\thesection}{\topskip}{\vspace{\topskip}}[\vspace{0pt}]
+
+%% Based on physlb01 class 
+%% Last modified 2012.08.28
+%%
+%% main.tex
+%% Based on formatted NIP thesis by Johnrob Y. Bantang (2006)
+%%
+%% Last modified 2012.03.19 cmnpinol
+%%
+%% This tex is free; you can redistribute it and/or modify it under
+%% the terms of the GNU General Public License as published by the
+%% Free Software Foundation version 2. See gpl.txt.
+%%
+%% This tex files are distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+%% General Public License for more details.
+%%
+%% You should have received a copy of the GNU General Public License
+%% along with this program; if not, write to the Free Software
+%% Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+%% 02110-1301, USA.
+%%
+%%
+%%
+
+
+   %% square-bracketed, numbered, sorted, and compressed citations
+   %% for more info: http://merkel.zoneo.net/Latex/natbib.php
+%\usepackage{verbatim} %% for \verbatiminput
+%\usepackage{graphicx} %% for the graphics environment%
+%\usepackage[centertags]{amsmath}
+
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.7}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+
+
+
+\usepackage[style=biblatex-cse,backend=biber]{biblatex}
+\DefineBibliographyStrings{english}{%
+  references = {Cited References}}
+\addbibresource{yodong.bib}
+
+%% Header section
+\title{\textbf{Time Series Analysis of Precipitation in Baguio City between 2000 and 2011 Using Holt-Winters Forecasting}}
+\email{author@mail.com}%% apperas only when dfrat version use \draft option.
+\adviser{Joseph S. Tabadero, Jr.}{M.S.}%% Required
+\reader{Melanie M. Matias}{M.A.}%% required 
+\head{Joseph S. Tabadero, Jr.}{M.S.} %% head
+\director{Arfe G. Castillo}{B.S.} %% director
+\dean{Conrado C. Rotor, Jr.}{Ph.D.} %% director
+\gradyear{2013}\gradmonth{March} %% graduation month and year
+\defenseDate{4 March 2013}
+
+%% Specify author details (for abstract, title page and certification page)
+\surnamea{Cabantac}
+\firstnamea{Sheanne}
+\midinitiala{E}
+\surnameb{Osbucan}
+\firstnameb{Mikhail}
+\midinitialb{O}
+\surnamec{Yodong}
+\firstnamec{Christopher}
+\midinitialc{O}
+%\firstnamed{Analoraine}
+%\midinitiald{M}
+%\surnamed{Dalilis}
+%\surnamee{Author}
+%\firstnamee{Fifth}
+%\midinitiale{N}
+%\surnamef{Author}
+%\firstnamef{Sixth}
+%\midinitialf{N}
+
+%% 
+
+%% Preliminary pages' contents input here..
+\dedication{ \input{dedication.tex} }%% optional, see dedication.tex for sample content.
+\biosketch{ \input{biosketch.tex} }%% optional, see biosketch.tex for sample content.
+\acknowledgments{ \input{acknowledgments.tex} } %% optional, see acknowledgment.tex for sample content.
+\abstract{ \input{abstract.tex} } %% see abstract.tex
+
+
+\usepackage{listings}
+\usepackage{inconsolata}
+\usepackage{caption}
+\captionsetup{skip=0pt,labelfont=bf}
+\usepackage{Sweavel}
+
+<<setup, include=FALSE, cache=FALSE>>=
+opts_chunk$set(fig.path = 'figure/listings-')
+options(replace.assign = TRUE, width=74)
+render_listings()
+@
+
+\begin{document}
+\maketitle %% creates title page, do not remove this line.
+\makePrelim %% creates preliminary pages, do not remove this line.
+
+\input{introduction.tex}
+\input{litReview.tex}
+\input{Methodology.tex} %%could be model or experiment set-up
+\input{Results.tex} %%could be results and discussions
+\input{summaryAndConclusion.tex}
+
+%% you may add more chapters by including more files just as above.
+%% see the files for patterns of the format used.
+
+\nocite{*}
+\printbibliography
+
+\appendix
+\input{appendix.tex}
+
+
+
+
+\end{document}
