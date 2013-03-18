@@ -1,8 +1,0 @@
-\contentsline {chapter}{Approval Sheet}{i}
-\contentsline {chapter}{ACKNOWLEDGEMENT}{iii}
-\contentsline {chapter}{ABSTRACT}{iv}
-\contentsline {chapter}{\numberline {1}THE PROBLEM}{1}
-\contentsline {section}{Background of the study}{1}
-\contentsline {section}{Definition of terms}{1}
-\contentsline {subsection}{A subsecction}{1}
-\contentsline {chapter}{\numberline {A}Biographical Sketch}{2}
